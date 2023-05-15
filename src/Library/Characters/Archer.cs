@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 namespace RoleplayGame
 {
-    public class Archer: ICharacter
+    public class Archer:Hero, ICharacter
     {
         private int health = 100;
 
