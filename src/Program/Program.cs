@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using RoleplayGame;
 
 namespace Program
@@ -26,6 +27,16 @@ namespace Program
             gimli.Cure();
 
             Console.WriteLine($"Someone cured Gimli. Gimli now has ❤️ {gimli.Health}");
+
+            Hero paco = new Knight("Paco");
+            Hero pepe = new Archer("Pepe");
+            
+            List<Hero> heroes = new List<Hero>();
+            heroes.Add(paco);
+            heroes.Add(pepe);
+            heroes.Add(gimli);
+
+            new CuevaGoblin(heroes);
         }
     }
 }
