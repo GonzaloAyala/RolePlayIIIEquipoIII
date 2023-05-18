@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using RoleplayGame;
 
-namespace Program
+namespace RoleplayGameProgram
 {
     class Program
     {
