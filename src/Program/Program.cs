@@ -30,7 +30,6 @@ namespace RoleplayGameProgram
 
             Hero paco = new Knight("Paco");
             Hero pepe = new Archer("Pepe");
-            Hero Mario = new Knight("Mario");
 
 
             Enemy Bowser = new Goblin("Bowser");
@@ -39,7 +38,6 @@ namespace RoleplayGameProgram
             heroes.Add(paco);
             heroes.Add(pepe);
             heroes.Add(gimli);
-            heroes.Add(Mario);
 
             new CuevaGoblin(heroes);
 
