@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 namespace RoleplayGame
 {
-    public class Ogro:Enemy,  ICharacter
+    public class Ogro:Enemy
     {
         private List<IItem> items = new List<IItem>();
 

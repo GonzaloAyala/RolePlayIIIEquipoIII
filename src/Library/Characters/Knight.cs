@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 namespace RoleplayGame
 {
-    public class Knight:Hero,  ICharacter
+    public class Knight:Hero
     {
         private List<IItem> items = new List<IItem>();
 

@@ -30,13 +30,21 @@ namespace RoleplayGameProgram
 
             Hero paco = new Knight("Paco");
             Hero pepe = new Archer("Pepe");
+            Hero Mario = new Knight("Mario");
+
+
+            Enemy Bowser = new Goblin("Bowser");
             
             List<Hero> heroes = new List<Hero>();
             heroes.Add(paco);
             heroes.Add(pepe);
             heroes.Add(gimli);
+            heroes.Add(Mario);
 
             new CuevaGoblin(heroes);
+
+            List<ICharacter> ListaEnanos = new List<ICharacter>{gimli};
+            
         }
     }
 }

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 namespace RoleplayGame
 {
-    public class Dwarf:Hero,  ICharacter
+    public class Dwarf:Hero
     {
         private List<IItem> items = new List<IItem>();
 

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 namespace RoleplayGame
 {
-    public class Goblin:Enemy,  ICharacter
+    public class Goblin:Enemy 
     {
         private List<IItem> items = new List<IItem>();
 

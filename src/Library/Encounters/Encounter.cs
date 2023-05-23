@@ -50,45 +50,45 @@ namespace RoleplayGame
             int heroeObjetivo = 0;
             this.Enemies.ForEach(enemigo =>
             {
-            if (enemigo.Health == 0)
-            {
-                return;
-            }
-            heroeObjetivo = heroeObjetivo == numeroHeroes? 0 : heroeObjetivo;
-            bool successfulAttack = false;
-            while (!successfulAttack)
-            {
-                if (this.Heroes[heroeObjetivo].Health == 0)
+                if (enemigo.Health == 0)
                 {
-                    heroeObjetivo++;
-                    heroeObjetivo = heroeObjetivo == numeroHeroes? 0 : heroeObjetivo;
-                    if (this.AllDead(this.Heroes))
-                    {
-                        break;
-                    }
-                } else {
-                    this.Heroes[heroeObjetivo].ReceiveAttack(enemigo.AttackValue);
-                    if (Heroes[heroeObjetivo].DefenseValue >= enemigo.AttackValue)
-                    {
-                        Console.WriteLine($"{enemigo.Name} no pudo penetrar las defensas de {this.Heroes[heroeObjetivo].Name}.");
-                    } else {
-                        Console.WriteLine($"{enemigo.Name} ataco a {this.Heroes[heroeObjetivo].Name} disminuyendo su salud a {this.Heroes[heroeObjetivo].Health}.");
-                    }
-                    if (this.Heroes[heroeObjetivo].Health == 0)
-                        {
-                            Console.WriteLine($"{this.Heroes[heroeObjetivo].Name} ha caido a manos de {enemigo.Name}!");
-                        }
-                    successfulAttack = true;
-                    heroeObjetivo++;
+                    return;
                 }
-            }
+                heroeObjetivo = heroeObjetivo == numeroHeroes? 0 : heroeObjetivo;
+                bool successfulAttack = false;
+                while (!successfulAttack)
+                {
+                    if (this.Heroes[heroeObjetivo].Health == 0)
+                    {
+                        heroeObjetivo++;
+                        heroeObjetivo = heroeObjetivo == numeroHeroes? 0 : heroeObjetivo;
+                        if (this.AllDead(this.Heroes))
+                        {
+                            break;
+                        }
+                    } else {
+                        this.Heroes[heroeObjetivo].ReceiveAttack(enemigo.AttackValue);
+                        if (Heroes[heroeObjetivo].DefenseValue >= enemigo.AttackValue)
+                        {
+                            Console.WriteLine($"{enemigo.Name} no pudo penetrar las defensas de {this.Heroes[heroeObjetivo].Name}.");
+                        } else {
+                            Console.WriteLine($"{enemigo.Name} ataco a {this.Heroes[heroeObjetivo].Name} disminuyendo su salud a {this.Heroes[heroeObjetivo].Health}.");
+                        }
+                        if (this.Heroes[heroeObjetivo].Health == 0)
+                            {
+                                Console.WriteLine($"{this.Heroes[heroeObjetivo].Name} ha caido a manos de {enemigo.Name}!");
+                            }
+                        successfulAttack = true;
+                        heroeObjetivo++;
+                    }
+                }
             });
             this.Heroes.ForEach(heroe => 
             {
-            if (heroe.Health == 0)
-            {
-                return;
-            }
+                if (heroe.Health == 0)
+                {
+                    return;
+                }
                 this.Enemies.ForEach(enemigo =>
                 {
                     if (enemigo.Health != 0)
