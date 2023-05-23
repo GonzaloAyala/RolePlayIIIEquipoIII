@@ -33,6 +33,7 @@ namespace RoleplayGameProgram
 
 
             Enemy Bowser = new Goblin("Bowser");
+            Enemy JackSparrow = new Pirate("Jack Sparrow"); 
             
             List<Hero> heroes = new List<Hero>();
             heroes.Add(paco);
